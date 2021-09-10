@@ -13,7 +13,7 @@ class CreateVacationTable extends Migration
      */
     public function up()
     {
-        Schema::create('vacation', function (Blueprint $table) {
+        Schema::create('trips', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->text("name_of_vacation");
@@ -32,6 +32,6 @@ class CreateVacationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vacation');
+        Schema::dropIfExists('trips');
     }
 }

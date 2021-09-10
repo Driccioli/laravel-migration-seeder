@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="public/app.css">
 </head>
 <body>
-    
+    @foreach ($packages as $package)
+        <div>
+            <h1>{{$package['name_of_vacation']}}</h1>
+            <ul>
+                <li>Departure: {{$package['departure']}}</li>
+                <li>Destination: {{$package['destination']}}</li>
+                <li>From: {{$package['date_from']}}</li>
+                <li>To: {{$package['date_to']}}</li>
+                <li>Price: {{$package['price']}}</li>
+            </ul>
+            <hr>
+        </div>
+    @endforeach
 </body>
 </html>
