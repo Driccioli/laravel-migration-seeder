@@ -12,7 +12,7 @@ class Package extends Controller
         return view("home", compact("packages"));
     }
     public function filtered(){
-        $packagesFiltered= Trips::where('departure', '=', 'Italy')->get();
+        $packagesFiltered= Trips::where('departure', 'Italy')->get();
         return view("filtered", compact("packagesFiltered"));
     }
 }
